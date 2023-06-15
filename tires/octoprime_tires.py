@@ -5,10 +5,4 @@ class OctoprimeTires(Tires):
         self.tire_sensor_values = tire_sensor_values
     
     def needs_service(self):
-        sum = 0 
-        for value in self.tire_sensor_values:
-            sum = sum + value
-        if sum >= 3:
-            return True
-        else:
-            return False
+        return sum(self.tire_sensor_values) >= 3.0
